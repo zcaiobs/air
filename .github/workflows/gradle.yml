@@ -39,6 +39,12 @@ jobs:
       - name: Test with Gradle
         run: ./gradlew test --stacktrace
 
+      - name: Upload test reports as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-reports
+          path: build/reports/tests/test/index.html
+
       - name: Build with Gradle
         run: ./gradlew build
 
