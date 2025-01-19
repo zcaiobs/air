@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /airs/v1
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb # Para um banco em memória
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update # Controla a criação/atualização automática do esquema (pode ser create, update, validate, none)
+

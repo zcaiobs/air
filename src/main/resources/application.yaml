@@ -1,8 +1,15 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /airs/v1
 spring:
   datasource:
-    url: jdbc:h2:mem:airdb
+    url: jdbc:postgresql://localhost:5432/
     username: air
     password: 123456
-    driverClassName: org.h2.Driver
+    driver-class-name: org.postgresql.Driver
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
